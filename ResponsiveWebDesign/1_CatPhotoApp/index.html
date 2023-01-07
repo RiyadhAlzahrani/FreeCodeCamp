@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!--This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications.-->
+<html lang="en"><!-- html file -->
+    <head>
+        <meta attribute="value" charset="UTF-8"><!-- set browser behavior by adding self-closing meta elements,, Tell the browser to parse the markup into multiple languages by creating a meta element Set its charset attribute to UTF-8 -->
+        <title>CatPhotoApp</title>
+    </head>
+    <body> <!--All page content elements that should be rendered to the page go inside the body element-->
+        <main> <!-- help to identify different content areas and help with SEO-->
+            <!-- nested indentation it is used to make HTML easier to read. 2 space bare in front-->
+            <h1>CatPhotoApp</h1> <!-- head importans "1" -->
+            <section >
+                <h2>Cat Photos</h2> <!--  head importans "2" lower important then "1" -->
+                <!-- TODO: Add link to cat photos -->
+                <p>See more <a target="_blank" href="https://freecatphotoapp.com">Cat photos </a>in our gallery.</p> <!--  paragraph  -->
+                <!-- <a href='https://freecatphotoapp.com'>link to cat pictures</a> !-- link to another page  -->
+                <!-- to add img without a closing tag is known as a self-closing tag.  -->
+                <a target="_blank" href="https://freecatphotoapp.com"><img src=" C:\Users\Riyad\Desktop\Programming\html\CatPhotoApp\CatPilot.jpg" alt="Cat driving an air plan"></a> <!-- sec is the path alt is the discription of the img  -->
+            </section>
+            <section>
+                <h2>Cat lists</h2>
+                <h3>Things cats love:</h3>
+                <ul><!-- unordered list -->
+                    <li>cat nip</li> <!-- lest item create items in a list-->
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+                <figure> <!-- represents self-contained content and will allow to associate an image with a caption -->
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption> <!-- to add a caption to describe the image contained within the figure -->
+                </figure>
+                <h3>Top 3 things cats hate:</h3>
+                <ol> <!-- similar to an unordered list, but list items in an ordered list are numbered when displayed -->
+                    <li>flea treatment</li> <!-- lest item -->
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                    <figcaption>Cats <strong>hate</strong> other cats.</figcaption> <!-- bald word = strong WOW-->
+                </figure>
+            </section>
+            <section>
+                <h2>Cat Form</h2>
+                <form action="https://freecatphotoapp.com/submit-cat-photo"><!-- web form to collect information from users "action is to send the data to..." -->
+                    <fieldset><!-- used to group related inputs and labels together in a web form. block-level elements, meaning that they appear on a new line.-->
+                        <legend>Is your cat an indoor or outdoor cat?</legend>
+                        <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> Indoor</label> <!-- create a radio butten with "name indoor and ID it" with label -->
+                        <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor</label> <!-- "name to make only one seleccted" "value to send it with the name same as the ID"-->
+                    </fieldset>
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+                        <input type="checkbox" id="loving" name="personality" value="loving" checked> <label for="loving">Loving</label> <!-- new way to label the checkbox and give it value -->
+                        <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                        <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+                    </fieldset>
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required><!-- to get an input from the user "type to spacify the type of the input" "name is and attribute represent the data being submitted" "placeholder hint about what kind of information to enter" "required prevent a user from submitting your form when required information is missing"-->
+                    <button type="submit">Submit</button><!-- add a button to "submit" the default behavior is to send the input to the action attribute -->
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>No Copyright - <a href="https://www.freecodecamp.org" >freeCodeCamp.org Coded by Riyadh</a></p>
+        </footer> 
+    </body>
+</html>
