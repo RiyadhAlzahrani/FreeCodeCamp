@@ -1,0 +1,45 @@
+.frame {
+    border: 50px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 20px auto;
+}
+.canvas {
+    width: 500px;
+    height: 600px;
+    background-color: #4d0f00;
+    /*padding: 1px; it increase the canvas width and height to 502px and 602px so we replace it with overflow: hidden*/
+    overflow: hidden;
+    filter: blur(2px); /*to blur the edges to make Rothko panting*/
+}
+.one{
+    width: 425px;
+    height: 150px;
+    background-color: #efb762;
+    margin: 20px auto;
+
+    box-shadow: 0px 0px 0px 0px #efb762; /*this will create a shadow : move-right move-down shadow-blur shadow-size shadow-color */
+    border-radius: 9px; /*smothe the corners*/
+    transform: rotate(-0.6deg); /*rotate it to 0.6 degree "opposite" "counter" "-" clockwise*/
+  }
+.two{
+    width: 475px;
+    height: 200px;
+    background-color: #8f0401;
+    margin: 0 auto 20px; /* top horizontal bottom*/ /*right left top bottom*/
+
+    box-shadow: 0 0 3px 3px #8f0401;
+    border-radius: 8px 10px; /*top-left top-right bottom-right bottom-left*//*or top-left-bottom-right top-right-bottom-left*/
+    transform: rotate(0.4deg);
+}
+.three{
+    width: 91%;
+    height: 28%;
+    background-color: #b20403;
+    margin: auto;
+    border-radius: 30px 25px 60px 12px;
+    transform: rotate(0.2deg);
+  }
+  .one, .two{
+    filter: blur(1px) /*by doing this the blur will incress 1px so the total is 3px*/
+  }
