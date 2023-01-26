@@ -1,0 +1,87 @@
+body{ /*  the Classes begin with . and the elements is directly by there name  */
+    /*
+    background-color: burlywood; "the body color" 
+    */
+    background-image:url("beans.jpg"); /*if it a url wibsite no need for " " */
+    font-family: sans-serif;
+    padding: 20px; /*little more room around the menu*/
+}
+.menu{ /* or div  that have a class menu*/
+    width: 80%; /* size the div in the page  */
+    background-color:burlywood; /* so u can see the div size in the page  */
+    margin-left:auto; /* to center the div in the body center  */
+    margin-right:auto;
+    /*padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;*/
+    padding: 20px; /* to add some space between the content and the sides in all sides*/
+    max-width: 500px;
+}
+h1, p, h2{
+    text-align:center; /* the position of the elemints h1 p h2 */
+}
+.item p{
+    display:inline-block;
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.flavor, .dessert{ /* 2 classes here */
+    text-align:left;
+    width:75%;
+}
+.price{
+    text-align:right;
+    width:25%;
+}
+h1, h2{
+    font-family:Impact, serif; /* the second font will be activated the the first font is not avalible this called a fallback*/
+}
+.established{
+    font-style: italic; /* italic */
+}
+/* for now... */
+
+h1{
+    font-size:  40px;
+    margin-top: 0; /*to remove all the top margin.*/
+    margin-bottom: 15px;
+}
+h2{
+    font-size:  30px;
+}
+hr{
+    height: 2px;  /* The default value of a property named border-width is 1px so the total height of the line is 4px */
+    background-color: brown;
+    border-color: brown;
+}
+.bottom-line{
+    margin-top:25px;
+}
+
+/*FOOTER*/
+footer{
+    font-size: 14px;
+}
+a{ /* to change the link color when not visited */
+    color: black;
+}
+a:visited { /* to change the link color when the user ckeck to it and visit it */
+    color: grey;
+}
+a:hover{ /* to change the link color when the user hover to it by the muse */
+    color: brown;
+}
+a:active{ /* to change the link color while the user ckecking on it by the muse */
+    color: white;
+}
+.address{
+    margin-bottom: 5px;
+}
+img{
+    display: block; /* to change elment img from inline to block to center it */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px; /* to change top margin for img */
+}

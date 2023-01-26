@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--<meta name="description" content="Riyadh"/>  used by search engines to provide a description of your page. -->
+  <!--<title>Quiz for life and will being</title>  its the title for the page help with SEO and for the tap name at least 15 char -->
+  <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+  <title>Accessibility Quiz</title>
+</head>
+
+<body>
+  <header><!-- will be used to introduce the page, as well as provide a navigation menu. -->
+    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+    <h1>HTML/CSS Quiz</h1>
+    <nav> <!-- this is for the navegation bar -->
+      <ul> <!-- to create a list of items that inteded to be used -->
+        <!-- accesskey="" for trigering the buttons using keybord shortcuts-->
+        <li><a href="#student-info" accesskey="a">INFO</a></li> <!-- here is 1 item to navgate throgh -->
+        <li><a href="#html-questions" accesskey="s">HTML</a></li> <!-- # for 'ID' -->
+        <li><a href="#css-questions" accesskey="d">CSS</a></li> <!-- a is an anchor -->
+      </ul>
+    </nav>
+  </header>
+  <main><!-- element will contain the core content of your page. -->
+    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+      <!-- this is the url that will be submited to and the method in this case it is submited -->
+      <section role="region" aria-labelledby="student-info"><!-- Web Accessibility Initiative (WAI) -->
+        <h2 id="student-info">Student Info</h2>
+        <div class="info">
+          <label for="student-name">Name:</label>
+          <input id="student-name" type="text" name="in_Name" placeholder="your First Name" />
+        </div>
+        <div class="info">
+          <label for="student-email">Email:</label>
+          <input id="student-email" type="email" name="in_Email" placeholder="your Email" />
+        </div>
+        <div class="info">
+          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+          <input id="birth-date" type="date" name="in_Age" />
+        </div>
+      </section>
+      <section role="region" aria-labelledby="html-questions">
+        <!-- the role attribute can be used to indicate the purpose behind an element -->
+        <h2 id="html-questions">HTML Questions</h2>
+        <div class="question-block">
+          <p>1</p>
+          <fieldset class="question" name="html-question-one">
+            <legend>
+              The legend element represents a caption for the content of its
+              parent fieldset element
+            </legend>
+            <ul class="answers-list">
+              <li><label for="q1-a1"><input type="radio" id="q1-a1" value="True" name="q1"/>True</label></li>
+              <li><label for="q1-a2"><input type="radio" id="q1-a2" value="False" name="q1"/>False</label></li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="question-block">
+          <p>2</p>
+          <fieldset class="question" name="html-question-two">
+            <legend>
+              A label element nesting an input element is required to have a
+              for attribute with the same value as the input's id
+            </legend>
+            <ul class="answers-list">
+              <li><label for="q2-a1"><input type="radio" id="q2-a1" value="True" name="q2"/>True</label></li>
+              <li><label for="q2-a2"><input type="radio" id="q2-a2" value="False" name="q2"/>False</label></li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+      <section role="region" aria-labelledby="css-questions"> <!-- Every region role requires a visible label -->
+        <h2 id="css-questions">CSS</h2>
+        <div class="formrow">
+          <div class="question-block">
+            <label for="customer">Are you a frontend developer?</label>
+          </div>
+          <div class="answer">
+            <select name="customer" id="customer" required>
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="question-block">
+            <label for="text">Do you have any questions:</label>
+          </div>
+          <div class="answer">
+            <textarea name="text-contant" id="text" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
+          </div>
+        </div>
+      </section>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <footer>
+    <address>
+      <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+      San Francisco<br />
+      California<br />
+      USA
+    </address>
+  </footer>
+</body>
+</html>

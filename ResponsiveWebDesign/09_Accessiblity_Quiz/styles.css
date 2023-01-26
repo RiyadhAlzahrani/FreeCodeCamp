@@ -1,0 +1,244 @@
+/*there is some problem with the sheet becouse the order of the commands the last declared rule is the first one that applied
+to fix this we need to change all the comands order*/
+
+
+/*
+@media (feature: value) {
+  selector {
+    styles
+  }
+}
+*/
+
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /*to optimaize the motion for vestibular disorders it can take 2 values 
+  reduce
+  no-preference*/
+  * {
+    /* * to select all the element in the html file*/
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #f5f6f7;
+  color: #1b1b32;
+  font-family: Helvetica;
+  margin: 0;
+}
+
+#logo {
+  /*selector with ID*/
+  width: max(100px, 18vw);
+  /*???*/
+  background-color: #0a0a23;
+  aspect-ratio: 35/4;
+  /*set the aspect ratio*/
+  padding: 0.4rem;
+}
+
+header {
+  width: 100%;
+  /*full screan width*/
+  height: 50px;
+  background-color: #1b1b32;
+  display: flex;
+  /*flexbox*/
+
+  justify-content: space-between;
+  /*Tidy up the header "flexbox"*/
+  align-items: center;
+  /*to put the cheldren to the center virticly*/
+  position: fixed;
+  /*make the header fixed so it does not disper "top of veiwport" */
+  top: 0;
+  /*make space on top of the header "why not use margin-top: 0;" */
+}
+
+h1 {
+  color: #f1be32;
+  /*change the font color*/
+  font-size: min(5vw, 1.2em);
+  /*???*/
+
+  text-align: center;
+  /*to make the h1 in the center*/
+}
+
+main {
+  padding-top: 50px;
+  /*so the main area can be seen not behind the header*/
+}
+
+nav>ul {
+  /*Target unordered list elements within nav*/
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+
+  flex-wrap: wrap;
+  /* this will make the choices in small screen vertical*/
+}
+
+h1,
+h2 {
+  font-family: "Verdana", sans-serif;
+  /*font-family: Verdana, Tahoma;*/
+}
+
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+  margin-top: 0px;
+  padding-top: 60px
+}
+
+.sr-only {
+  position: absolute;
+  /*the place*/
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /*??*/
+  white-space: nowrap;
+  /*???*/
+}
+
+p::before {
+  content: "Question #"
+    /*put Question # before the text*/
+}
+
+nav>ul>li {
+  /*You should use either the "nav li" or "nav > ul > li" selector.*/
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+li>a {
+  /*from nav>ul>li>a to it*/
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav>ul>li:hover {
+  color: #1b1b32;
+  background-color: #dfdfe2;
+  cursor: pointer;
+  /*change the cursor to pointer*/
+}
+
+section {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  /* put the section in the center*/
+  margin-bottom: 10px;
+}
+
+.info {
+  padding: 10px 0 0 10px;
+  /*top right bottom left*/
+  /*top left-right bottom*/
+  /*top-bottom left-right*/
+  /*all*/
+}
+
+.formrow {
+  margin-top: 30px;
+  padding: 0px 15px;
+}
+
+input {
+  font-size: 16px;
+}
+
+.info input {
+  /*or just ".info input"*/
+  width: 50%;
+  text-align: left;
+  /*to change the text-align to the left side*/
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+  text-align: right;
+}
+
+.info input,
+.info label {
+  /*or .info > label, .info > input*/
+  display: inline-block;
+  /*to adjust the start and end boxes*/
+
+}
+
+.question-block {
+  text-align: left;
+  display: block;
+  /**/
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+p {
+  /*Make the paragraph elements appear as a higher priority*/
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.question {
+  border: none;
+  /*remove the borders with "none"*/
+  padding-bottom: 0px;
+}
+
+.answers-list {
+  list-style: none;
+  /*to  remove all the defult styling*/
+  padding: 0px;
+}
+
+button {
+  /*submit button id as a # class as a . */
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+
+footer {
+  background: #2a2a40;
+  display: flex;
+  /*change from block to flex "flexbox*/
+  justify-content: center;
+  /*bcuz its flex we use this to change the position of the content*/
+}
+
+footer,
+footer a {
+  color: #dfdfe2;
+}
+
+address {
+  text-align: center;
+  padding: 0.3em;
+  /*I used this --> padding: 10px;*/
+}
